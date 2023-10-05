@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
-const AmountInput = () => {
+const AmountInput = ({
+  handleSubmit: handleChange,
+}: {
+  handleSubmit: (val: string) => void;
+}) => {
+  const [inputAmount, setInputAmount] = useState<string>();
   return (
     <div>
       <h1 className="text-center">Coin Calculator</h1>
@@ -13,6 +18,7 @@ const AmountInput = () => {
             type="number"
             placeholder="amount in dollars and cents"
             className="form-control"
+            onChange={(e) => setInputAmount(e.target.value)}
           />
         </div>
       </div>
@@ -21,6 +27,7 @@ const AmountInput = () => {
         id="calculate-change"
         type="submit"
         className="btn btn-outline-success btn-lg btn-block"
+        onClick={() => inputAmount && handleChange(inputAmount)}
       >
         Calculate
       </button>

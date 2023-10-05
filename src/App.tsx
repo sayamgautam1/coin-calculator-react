@@ -1,16 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 import AmountInput from "./components/AmountInput";
 import CoinsDisplay from "./components/CoinsDisplay";
-import { useState } from "react";
+import { Denominations, getCoins } from "./utils/coins";
+import { parseAmtAsString } from "./utils/string";
 
 function App() {
+  const [coins, setCoins] = useState<Denominations>();
+
+  const handleSubmit = (value: string) => {
+    console.log("App got value:", value);
+    const amtInNumber = parseAmtAsString(value);
+    const coins = getCoins(amtInNumber);
+    setCoins(coins);
+  };
+
   return (
     <div className="App">
-      <AmountInput />
-      <CoinsDisplay />
+      <AmountInput handleSubmit={handleSubmit} />
+      {coins && <CoinsDisplay coins={coins} />}
     </div>
   );
 }

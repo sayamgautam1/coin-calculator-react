@@ -1,10 +1,39 @@
 import React from "react";
+import { Denominations } from "../utils/coins";
 
-const CoinsDisplay = () => {
+const coinsForDisplay = [
+  {
+    value: 1,
+    id: "1c",
+    label: "1¢",
+    img: "img/1c.jpg",
+    alt: "One cent",
+  },
+] as const;
+
+type DisplayCoin = (typeof coinsForDisplay)[number];
+const Coin = ({ coin }: { coin: DisplayCoin }) => (
+  <div className="col-sm-6 col-md-4 col-lg-3">
+    <h2 className="text-center">{coin.label}</h2>
+    <img
+      src={coin.img}
+      alt={coin.alt}
+      className="coinImg img-fluid img-thumbnail"
+    />
+    <p className="coin lead text-center" id="1c-output"></p>
+  </div>
+);
+
+const CoinsDisplay = ({ coins }: { coins: Denominations }) => {
   return (
     <div>
       <div>
         <div className="row">
+          {coinsForDisplay
+            .filter((c) => coins[c.id] > 0)
+            .map((coin) => (
+              <Coin coin={coin} key={coin.value} />
+            ))}
           <div className="col-sm-6 col-md-4 col-lg-3">
             <h2 className="text-center">1&#162;</h2>
             <img
