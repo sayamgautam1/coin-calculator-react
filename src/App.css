@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+.coinImg {
+  display: block;
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto;
+}
+.coin {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
