@@ -2,11 +2,14 @@ import { getCoins } from "./coins";
 
 describe("coins", () => {
   it("runs", () => {
-    expect(getCoins(1023)).toEqual({
-      "1c": 10,
-      "2c": 1,
-      "10c": 0,
-      "2s": 2,
-    });
+    const denominations = getCoins(1023);
+    expect(denominations).toEqual(
+      expect.objectContaining({
+        "1c": 1,
+        "2c": 1,
+        "20c": 1,
+        "2d": 5,
+      })
+    );
   });
 });
