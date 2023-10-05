@@ -9,6 +9,56 @@ const coinsForDisplay = [
     img: "img/1c.jpg",
     alt: "One cent",
   },
+  {
+    value: 1,
+    id: "2c",
+    label: "2¢",
+    img: "img/2c.jpg",
+    alt: "Two cents",
+  },
+  {
+    value: 1,
+    id: "5c",
+    label: "5¢",
+    img: "img/5c.jpg",
+    alt: "Five cents",
+  },
+  {
+    value: 1,
+    id: "10c",
+    label: "10¢",
+    img: "img/10c.jpg",
+    alt: "Ten cents",
+  },
+  {
+    value: 1,
+    id: "20c",
+    label: "20¢",
+    img: "img/20c.jpg",
+    alt: "One cent",
+  },
+  {
+    value: 1,
+    id: "50c",
+    label: "50¢",
+    img: "img/50c.jpg",
+    alt: "Fifty cents",
+  },
+  {
+    value: 1,
+    id: "1s",
+    label: "1$",
+    img: "img/1s.jpg",
+    alt: "One dollar",
+  },
+
+  {
+    value: 1,
+    id: "2s",
+    label: "2$",
+    img: "img/2s.jpg",
+    alt: "Two dollar",
+  },
 ] as const;
 
 type DisplayCoin = (typeof coinsForDisplay)[number];
@@ -34,7 +84,7 @@ const CoinsDisplay = ({ coins }: { coins: Denominations }) => {
             .map((coin) => (
               <Coin coin={coin} key={coin.value} />
             ))}
-          <div className="col-sm-6 col-md-4 col-lg-3">
+          {/* <div className="col-sm-6 col-md-4 col-lg-3">
             <h2 className="text-center">1&#162;</h2>
             <img
               src="img/1c.jpg"
@@ -82,9 +132,9 @@ const CoinsDisplay = ({ coins }: { coins: Denominations }) => {
               className="coinImg img-fluid img-thumbnail"
             />
             <p className="coin lead text-center" id="20c-output"></p>
-          </div>
+          </div> */}
 
-          <div className="col-sm-6 col-md-4 col-lg-3">
+          {/* <div className="col-sm-6 col-md-4 col-lg-3">
             <h2 className="text-center">50&#162;</h2>
             <img
               src="img/50c.jpg"
@@ -112,7 +162,7 @@ const CoinsDisplay = ({ coins }: { coins: Denominations }) => {
               className="coinImg img-fluid img-thumbnail"
             />
             <p className="coin lead text-center" id="2s-output"></p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
