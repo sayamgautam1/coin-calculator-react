@@ -4,6 +4,7 @@ import "./App.css";
 
 import AmountInput from "./components/AmountInput";
 import CoinsDisplay from "./components/CoinsDisplay";
+import { useState } from "react";
 
 function App() {
   return (
