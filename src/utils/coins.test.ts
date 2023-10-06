@@ -12,4 +12,13 @@ describe("coins", () => {
       })
     );
   });
+  it("runs", () => {
+    const denominations = getCoins(5);
+
+    expect(denominations).toEqual(
+      expect.objectContaining({
+        "5c": 1,
+      })
+    );
+  });
 });

@@ -3,65 +3,71 @@ import { Denominations } from "../utils/coins";
 
 const coinsForDisplay = [
   {
-    value: 1,
+    value: 0,
     id: "1c",
     label: "1¢",
     img: "img/1c.jpg",
     alt: "One cent",
   },
   {
-    value: 1,
+    value: 0,
     id: "2c",
     label: "2¢",
     img: "img/2c.jpg",
     alt: "Two cents",
   },
   {
-    value: 1,
+    value: 0,
     id: "5c",
     label: "5¢",
     img: "img/5c.jpg",
     alt: "Five cents",
   },
   {
-    value: 1,
+    value: 0,
     id: "10c",
     label: "10¢",
     img: "img/10c.jpg",
     alt: "Ten cents",
   },
   {
-    value: 1,
+    value: 0,
     id: "20c",
     label: "20¢",
     img: "img/20c.jpg",
     alt: "One cent",
   },
   {
-    value: 1,
+    value: 0,
     id: "50c",
     label: "50¢",
     img: "img/50c.jpg",
     alt: "Fifty cents",
   },
   {
-    value: 1,
-    id: "1s",
+    value: 0,
+    id: "1d",
     label: "1$",
     img: "img/1s.jpg",
     alt: "One dollar",
   },
 
   {
-    value: 1,
-    id: "2s",
+    value: 0,
+    id: "2d",
     label: "2$",
     img: "img/2s.jpg",
     alt: "Two dollar",
   },
 ] as const;
 
-type DisplayCoin = (typeof coinsForDisplay)[number];
+type DisplayCoin = {
+  value: number;
+  id: keyof Denominations;
+  label: string;
+  img: string;
+  alt: string;
+};
 const Coin = ({ coin }: { coin: DisplayCoin }) => (
   <div className="col-sm-6 col-md-4 col-lg-3">
     <h2 className="text-center">{coin.label}</h2>
@@ -70,11 +76,14 @@ const Coin = ({ coin }: { coin: DisplayCoin }) => (
       alt={coin.alt}
       className="coinImg img-fluid img-thumbnail"
     />
-    <p className="coin lead text-center" id="1c-output"></p>
+    <p className="coin lead text-center" id="1c-output">
+      {coin.value}
+    </p>
   </div>
 );
 
 const CoinsDisplay = ({ coins }: { coins: Denominations }) => {
+  console.log({ coins, coinsForDisplay }, "coinsdisplay");
   return (
     <div>
       <div>
@@ -82,7 +91,7 @@ const CoinsDisplay = ({ coins }: { coins: Denominations }) => {
           {coinsForDisplay
             .filter((c) => coins[c.id] > 0)
             .map((coin) => (
-              <Coin coin={coin} key={coin.value} />
+              <Coin coin={{ ...coin, value: coins[coin.id] }} key={coin.id} />
             ))}
           {/* <div className="col-sm-6 col-md-4 col-lg-3">
             <h2 className="text-center">1&#162;</h2>
