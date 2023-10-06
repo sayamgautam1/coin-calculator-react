@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/coin-calculator-react/static/css/main.f9de3b07.css",
-    "main.js": "/coin-calculator-react/static/js/main.8f62a02f.js",
+    "main.js": "/coin-calculator-react/static/js/main.376f991f.js",
     "static/js/787.7937ec07.chunk.js": "/coin-calculator-react/static/js/787.7937ec07.chunk.js",
     "index.html": "/coin-calculator-react/index.html",
     "main.f9de3b07.css.map": "/coin-calculator-react/static/css/main.f9de3b07.css.map",
-    "main.8f62a02f.js.map": "/coin-calculator-react/static/js/main.8f62a02f.js.map",
+    "main.376f991f.js.map": "/coin-calculator-react/static/js/main.376f991f.js.map",
     "787.7937ec07.chunk.js.map": "/coin-calculator-react/static/js/787.7937ec07.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f9de3b07.css",
-    "static/js/main.8f62a02f.js"
+    "static/js/main.376f991f.js"
   ]
 }
