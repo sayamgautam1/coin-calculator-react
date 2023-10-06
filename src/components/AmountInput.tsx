@@ -15,6 +15,7 @@ const AmountInput = ({
           <span className="input-group-text">$</span>
           <input
             id="total-amount"
+            name="coin-input"
             type="number"
             placeholder="amount in dollars and cents"
             className="form-control"
