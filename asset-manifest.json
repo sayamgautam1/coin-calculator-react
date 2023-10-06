@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/coin-calculator-react/static/css/main.f9de3b07.css",
-    "main.js": "/coin-calculator-react/static/js/main.376f991f.js",
+    "main.css": "/coin-calculator-react/static/css/main.00c7f909.css",
+    "main.js": "/coin-calculator-react/static/js/main.d9974f7d.js",
     "static/js/787.7937ec07.chunk.js": "/coin-calculator-react/static/js/787.7937ec07.chunk.js",
     "index.html": "/coin-calculator-react/index.html",
-    "main.f9de3b07.css.map": "/coin-calculator-react/static/css/main.f9de3b07.css.map",
-    "main.376f991f.js.map": "/coin-calculator-react/static/js/main.376f991f.js.map",
+    "main.00c7f909.css.map": "/coin-calculator-react/static/css/main.00c7f909.css.map",
+    "main.d9974f7d.js.map": "/coin-calculator-react/static/js/main.d9974f7d.js.map",
     "787.7937ec07.chunk.js.map": "/coin-calculator-react/static/js/787.7937ec07.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f9de3b07.css",
-    "static/js/main.376f991f.js"
+    "static/css/main.00c7f909.css",
+    "static/js/main.d9974f7d.js"
   ]
 }
