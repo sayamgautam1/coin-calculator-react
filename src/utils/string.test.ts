@@ -20,5 +20,10 @@ describe("Coin change calculator", () => {
       const cents = parseAmtAsString(".5");
       expect(cents).toBe(50);
     });
+
+    it("handles negative inputs", () => {
+      const cents = parseAmtAsString("-100");
+      expect(cents).toBe(0);
+    });
   });
 });

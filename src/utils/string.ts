@@ -1,4 +1,8 @@
 export const parseAmtAsString = (strAmt: string): number => {
+  // Check if the input is negative
+  if (strAmt.startsWith("-")) {
+    return 0;
+  }
   let [dollarsStr, centsStr] = strAmt.split(".");
   let dollars = dollarsStr ? parseInt(dollarsStr) : 0;
   let cents = centsStr ? parseInt(centsStr) : 0;

@@ -48,7 +48,7 @@ const coinsForDisplay = [
     value: 0,
     id: "1d",
     label: "1$",
-    img: "img/1s.jpg",
+    img: "img/1d.jpg",
     alt: "One dollar",
   },
 
@@ -56,7 +56,7 @@ const coinsForDisplay = [
     value: 0,
     id: "2d",
     label: "2$",
-    img: "img/2s.jpg",
+    img: "img/2d.jpg",
     alt: "Two dollar",
   },
 ] as const;
