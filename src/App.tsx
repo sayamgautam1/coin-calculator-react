@@ -11,7 +11,6 @@ function App() {
   const [coins, setCoins] = useState<Denominations>();
 
   const handleSubmit = (value: string) => {
-    console.log("App got value:", value);
     const amtInNumber = parseAmtAsString(value);
     const coins = getCoins(amtInNumber);
     setCoins(coins);
